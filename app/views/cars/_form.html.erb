@@ -1,0 +1,30 @@
+<%= form_for @car do |f| %>
+<div>
+  <%= f.label :make %>
+  <%= f.select :make, Car.makes %>
+</div>
+
+<div>
+  <%= f.label :model %>
+  <%= f.text_field :model %>
+</div>
+
+<div>
+  <%= f.label :year %>
+  <%= f.number_field :year %>
+</div>
+
+<div>
+  <%= f.label :color %>
+  <%= f.text_field :color %>
+</div>
+
+<div>
+  <%= f.label :runs %>
+  <%= f.select :runs, [['Yes', true], ['No', false]] %>
+</div>
+
+<%= f.submit %> 
+
+<% end %>  
+
